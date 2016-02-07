@@ -2,3 +2,11 @@ language: go
 
 go:
   - 1.5
+
+install: 
+  - go get github.com/spf13/hugo
+
+script:
+  - ls -al
+  - pwd
+  - deploy.sh
