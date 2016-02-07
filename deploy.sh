@@ -3,7 +3,7 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t wwcdc
+hugo
 
 git config user.name "Travis CI"
 git config user.email "<you>@<your-email>"
