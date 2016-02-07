@@ -4,6 +4,7 @@ go:
 install:
 - go get github.com/spf13/hugo
 script:
+- env
 - ./deploy.sh
 env:
   global:
