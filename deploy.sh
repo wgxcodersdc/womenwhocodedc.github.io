@@ -20,4 +20,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public "https://${GH_TOKEN}@${GH_REF}" gh-pages
+git subtree push --prefix=public "https://$GH_TOKEN@$GH_REF" gh-pages
