@@ -21,3 +21,4 @@ git commit -m "$msg"
 # Push source and build repos.
 git subtree push --prefix=public "https://$GH_TOKEN@$GH_REF" gh-pages > /dev/null 2>&1
 
+echo "1"
