@@ -19,6 +19,6 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git subtree push --prefix=public "https://$GH_TOKEN@$GH_REF" gh-pages -f
+git subtree push -f --prefix=public "https://$GH_TOKEN@$GH_REF" gh-pages > /dev/null 2>&1
 
 echo "plz don't fail (apparently redirecting output above causes script to fail in travis, since it's the last line)"
