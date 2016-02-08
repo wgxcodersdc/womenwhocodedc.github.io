@@ -1,4 +1,4 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://julia-allyce.github.io/wwcdc-site/"
 languageCode = "en-us"
 title = ""
 theme = "wwcdc"
