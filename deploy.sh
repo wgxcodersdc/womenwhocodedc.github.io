@@ -2,11 +2,11 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build the project.
-hugo -t wwcdc
-
 git config user.name "Travis CI"
 git config user.email "<you>@<your-email>"
+
+# Build the project.
+hugo -t wwcdc
 
 # Add changes to git.
 git add -A
@@ -19,6 +19,6 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git subtree push --prefix=public "https://$GH_TOKEN@$GH_REF" gh-pages > /dev/null 2>&1
+git subtree push --prefix=public "https://$GH_TOKEN@$GH_REF" gh-pages
 
 echo "plz don't fail (apparently redirecting output above causes script to fail in travis, since it's the last line)"
