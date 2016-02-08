@@ -1,7 +1,8 @@
 +++
 date = "2016-02-07T18:47:46-05:00"
 title = "Front End"
-
+description = "Bacon ipsum dolor amet short ribs pastrami pork loin."
+menu = "main"
 +++
 
 # Front End FOREVERRRR

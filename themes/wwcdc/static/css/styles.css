@@ -12660,7 +12660,7 @@ header.nav-header-fixed ul.ul-menu.expand li.li-nav-link {
   transition: .5s
 }
 
-header.nav-header-fixed ul.ul-menu.expand li.li-nav-link:active {
+header.nav-header-fixed ul.ul-menu.expand li.li-nav-link:active  {
   background: #00b5a9
 }
 
@@ -12768,7 +12768,8 @@ header.nav-header-fixed ul.ul-menu.expand .donate-nav a {
     transition: 1s
   }
 
-  header.nav-header-fixed ul li.li-nav-link a:hover {
+  header.nav-header-fixed ul li.li-nav-link a:hover,
+  header.nav-header-fixed ul li.li-nav-link.active a {
     opacity: .90;
     background-color: #00b5a9
   }

@@ -1,4 +1,5 @@
 baseurl = "http://julia-allyce.github.io/wwcdc-site"
 languageCode = "en-us"
-title = ""
+title = "The Washington DC Chapter of WWC"
 theme = "wwcdc"
+menu = "main"
