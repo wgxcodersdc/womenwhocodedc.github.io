@@ -6,7 +6,7 @@ git config user.name "Travis CI"
 git config user.email "<you>@<your-email>"
 
 # Build the project.
-hugo -t wwcdc
+hugo
 
 # Add changes to git.
 git add -A
