@@ -8,7 +8,9 @@ git config user.email "<you>@<your-email>"
 # Build the project.
 hugo
 
-if [ $? -eq 0 ] 
+toreturn=$?
+
+if [ $toreturn -eq 0 ] 
 then
   # Add changes to git.
   git add -A
@@ -25,3 +27,4 @@ then
   git push -f "https://$GH_TOKEN@$GH_REF" gh-pages:gh-pages > /dev/null 2>&1
   git branch -D gh-pages
 fi
+$toreturn
