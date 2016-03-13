@@ -8,7 +8,8 @@ git config user.email "<you>@<your-email>"
 # Build the project.
 hugo
 
-if [ $? -ne 0 ] then
+if [ $? -ne 0 ] 
+then
   # Add changes to git.
   git add -A
 
