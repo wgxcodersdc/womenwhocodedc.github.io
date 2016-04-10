@@ -10,19 +10,11 @@ git config user.email "wwcodedc@gmail.com"
 # Build the project.
 hugo
 
-# Get the current branch name
-branch_name=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
-
-# Get the branch name from Travis
-
-echo "The Travis branch name is $TRAVIS_BRANCH"
-
 # Only push to gh-pages if on the master branch
-# In Travis, when merging a branch with master the branch name is HEAD
 
-if [[ $branch_name = "master" || $branch_name = "HEAD" ]]
+if [[ $TRAVIS_BRANCH = "master" ]]
 then 
-  echo -e "\033[0;32m On $branch_name branch, publishing to Github Pages\033[0m"
+  echo -e "\033[0;32m On $TRAVIS_BRANCH branch, publishing to Github Pages\033[0m"
 
   toreturn=$?
 
@@ -47,12 +39,12 @@ then
 
 fi
 
-# If the branch name is neither master nor HEAD then do not push to gh-pages
+# If not on master then don't push to gh-pages
 
-if [[ $branch_name != "master" && $branch_name != "HEAD" ]]
+if [[ $TRAVIS_BRANCH != "master" ]]
 then 
 
   echo "Not on master branch, not updating WWCDC public website"
-  echo "On $branch_name branch, not pushing to gh-pages"
+  echo "On $TRAVIS_BRANCH branch, not pushing to gh-pages"
 
 fi
