@@ -2,6 +2,11 @@
 
 echo -e "\033[0;32mRunning Travis test for WWCDC website\033[0m"
 
+# Set git config so Travis doesn't complain that it doesn't know who we are
+
+git config user.name "WWCDC Travis CI build"
+git config user.email "wwcodedc@gmail.com"
+
 # Build the project.
 hugo
 
@@ -13,7 +18,7 @@ branch_name=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 
 if [[ $branch_name = "master" || $branch_name = "HEAD" ]]
 then 
-  echo -e "\033[0;32m On master branch, publishing to Github Pages\033[0m"
+  echo -e "\033[0;32m On $branch_name branch, publishing to Github Pages\033[0m"
 
   toreturn=$?
 
