@@ -12,6 +12,8 @@ toreturn=$?
 
 if [ $toreturn -eq 0 ] 
 then
+  # Push source and build repos.
+  git subtree split --prefix=public -b gh-pages
   # Add changes to git.
   git add -A
 
@@ -21,9 +23,6 @@ then
     then msg="$1"
   fi
   git commit -m "$msg"
-
-  # Push source and build repos.
-  git subtree split --prefix=public -b gh-pages
   git push -f "https://$GH_TOKEN@$GH_REF" gh-pages:gh-pages > /dev/null 2>&1
   git branch -D gh-pages
 fi
