@@ -2,16 +2,16 @@
 
 echo -e "\033[0;32mRunning Travis test for WWCDC website\033[0m"
 
-#git config user.name "Travis CI"
-#git config user.email "<you>@<your-email>"
-
 # Build the project.
 hugo
 
 # Get the current branch name
 branch_name=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 
-if [ $branch_name = "master" ]
+# Only push to gh-pages if on the master branch
+# In Travis, when merging a branch with master the branch name is HEAD
+
+if [[ $branch_name = "master" || $branch_name = "HEAD" ]]
 then 
   echo -e "\033[0;32m On master branch, publishing to Github Pages\033[0m"
 
@@ -38,7 +38,9 @@ then
 
 fi
 
-if [ $branch_name != "master" ]
+# If the branch name is neither master nor HEAD then do not push to gh-pages
+
+if [[ $branch_name != "master" && $branch_name != "HEAD" ]]
 then 
 
   echo "Not on master branch, not updating WWCDC public website"
