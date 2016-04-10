@@ -13,6 +13,10 @@ hugo
 # Get the current branch name
 branch_name=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 
+# Get the branch name from Travis
+
+echo "The Travis branch name is $TRAVIS_BRANCH"
+
 # Only push to gh-pages if on the master branch
 # In Travis, when merging a branch with master the branch name is HEAD
 
