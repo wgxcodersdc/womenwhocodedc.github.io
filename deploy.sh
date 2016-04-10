@@ -2,18 +2,19 @@
 
 echo -e "\033[0;32mRunning Travis test for WWCDC website\033[0m"
 
-#git config user.name "Travis CI"
-#git config user.email "<you>@<your-email>"
+# Set git config so Travis doesn't complain that it doesn't know who we are
+
+git config user.name "WWCDC Travis CI build"
+git config user.email "wwcodedc@gmail.com"
 
 # Build the project.
 hugo
 
-# Get the current branch name
-branch_name=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+# Only push to gh-pages if on the master branch
 
-if [ $branch_name = "master" ]
+if [[ $TRAVIS_BRANCH = "master" ]]
 then 
-  echo -e "\033[0;32m On master branch, publishing to Github Pages\033[0m"
+  echo -e "\033[0;32m On $TRAVIS_BRANCH branch, publishing to Github Pages\033[0m"
 
   toreturn=$?
 
@@ -38,10 +39,12 @@ then
 
 fi
 
-if [ $branch_name != "master" ]
+# If not on master then don't push to gh-pages
+
+if [[ $TRAVIS_BRANCH != "master" ]]
 then 
 
   echo "Not on master branch, not updating WWCDC public website"
-  echo "On $branch_name branch, not pushing to gh-pages"
+  echo "On $TRAVIS_BRANCH branch, not pushing to gh-pages"
 
 fi
