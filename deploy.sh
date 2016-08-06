@@ -32,7 +32,7 @@ then
   git config user.email "wwcodedc@gmail.com"
 
   # add CNAME please?
-  echo "www.womenwhocodedc.com" >> CNAME
+  echo "www.womenwhocodedc.com" >> public/CNAME
   git add CNAME
 
   # Add changes to git.
