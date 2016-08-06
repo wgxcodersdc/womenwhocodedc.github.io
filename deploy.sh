@@ -33,7 +33,6 @@ then
 
   # add CNAME please?
   echo "www.womenwhocodedc.com" > public/CNAME
-  git add CNAME
 
   # Add changes to git.
   git add -A
