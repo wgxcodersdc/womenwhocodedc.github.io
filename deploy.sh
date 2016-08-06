@@ -31,6 +31,8 @@ then
   git config user.name "WWCDC Travis CI build"
   git config user.email "wwcodedc@gmail.com"
 
+  echo "www.womenwhocodedc.com" > CNAME
+
   # Add changes to git.
   git add -A
 
