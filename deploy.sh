@@ -43,7 +43,7 @@ then
 
   # Push source and build repos.
   git subtree split --prefix=public -b master
-  git push -f "https://$GH_TOKEN@$GH_REF" gh-pages:gh-pages > /dev/null 2>&1
+  git push -f "https://$GH_TOKEN@$GH_REF" master:master > /dev/null 2>&1
   git branch -D master
 
 fi
