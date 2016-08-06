@@ -8,7 +8,7 @@
     </button>
     <div class="nav-menu">
       <!-- responsive burger -->
-      <ul class="ul-menu">
+      <ul id="main-menu" class="ul-menu">
         {{ $currentNode := . }}
         {{ range .Site.Menus.main }}
           <li class="li-nav-link {{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">

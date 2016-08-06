@@ -123,5 +123,18 @@
     {{ end }}
   </div>
 </div>
+{{ partial "footer.html" . }}
 </body>
+<script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // expands and closes the menu for mobile views
+    var $menuToggle = $('#mbtn');
+    var $menu = $('#main-menu');
+    $menuToggle.on('click', function() {
+      $menuToggle.toggleClass('close');
+      $menu.toggleClass('expand');
+    });
+  });
+</script>
 </html>
