@@ -1,7 +1,7 @@
 +++
 date = "2016-08-07T18:47:46-05:00"
 title = "Tech Team"
-description = "Bacon ipsum dolor amet short ribs pastrami pork loin."
+description = "We are going to make placeholder text great again."
 menu = "main"
 +++
 
