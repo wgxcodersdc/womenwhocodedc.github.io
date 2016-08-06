@@ -21,7 +21,7 @@ echo "Hugo build succeeded!"
 
 # Only push to gh-pages if on the master branch
 
-if [[ $TRAVIS_BRANCH = "master" ]]
+if [[ $TRAVIS_BRANCH = "dev" ]]
 then 
 
   echo -e "\033[0;32m On $TRAVIS_BRANCH branch, publishing to Github Pages\033[0m"
@@ -42,18 +42,18 @@ then
   git commit -m "$msg"
 
   # Push source and build repos.
-  git subtree split --prefix=public -b gh-pages
+  git subtree split --prefix=public -b master
   git push -f "https://$GH_TOKEN@$GH_REF" gh-pages:gh-pages > /dev/null 2>&1
-  git branch -D gh-pages
+  git branch -D master
 
 fi
 
 # If not on master then don't push to gh-pages
 
-if [[ $TRAVIS_BRANCH != "master" ]]
+if [[ $TRAVIS_BRANCH != "dev" ]]
 then 
 
   echo "Not on master branch, not updating WWCDC public website"
-  echo "On $TRAVIS_BRANCH branch, not pushing to gh-pages"
+  echo "On $TRAVIS_BRANCH branch, not pushing to master"
 
 fi
