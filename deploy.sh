@@ -36,6 +36,8 @@ then
 
   # Add changes to git.
   git add -A
+  # Force adding changes on the ignored public folder
+  git add -f public
 
   # Commit changes.
   msg="rebuilding site `date`"
