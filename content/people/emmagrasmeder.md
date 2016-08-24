@@ -4,8 +4,8 @@ github = ""
 linkedin = ""
 name = "Emma Grasmeder"
 quote = "Join our team!"
-wwcdctitle = "Director"
+wwcdctitle = "Alumni"
 twitter = ""
-image = "https://www.filepicker.io/api/file/rBDYIj53TrS6qAEGrsRD/convert?fit=scales&amp;h=300"
+image = "https://www.filepicker.io/api/file/rBDYIj53TrS6qAEGrsRD/convert?fit=scales&h=300"
 +++
 

@@ -1,5 +1,5 @@
 +++
-date = "2016-04-10T17:12:42-04:00"
+date = "2016-08-23T17:12:42-04:00"
 github = ""
 linkedin = ""
 name = "Katherine McClintic"
