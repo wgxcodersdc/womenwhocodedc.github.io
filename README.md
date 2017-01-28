@@ -10,4 +10,4 @@ Welcome to the Women Who Code D.C. website! We are using [Hugo](https://gohugo.i
 4. Trigger a new Pull Request and tag members of the tech team to review/merge it
 5. Wait a couple minutes after approved and see the changes live!
 
-URL: [http://www.womenwhocodedc.com](http://www.womenwhocodedc.com)
+URL: [http://staging.womenwhocodedc.com](http://staging.womenwhocodedc.com)
