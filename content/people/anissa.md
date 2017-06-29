@@ -1,7 +1,6 @@
 +++
 date = "2016-08-23T17:12:42-04:00"
 github = "superjones"
-linkedin = ""
 name = "Anissa Jones"
 wwcdctitle = "Ruby on Rails Lead and Tech Team Lead"
 twitter = "i_am_anissa"

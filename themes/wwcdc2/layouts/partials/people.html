@@ -7,6 +7,17 @@
             <h3>{{ .Params.name }}</h3>
             <h4>{{ .Params.wwcdcTitle }}</h4>
             <div>
+                {{ if isset .Params "linkedin" }}
+                    <a href="{{ .Params.linkedin }}" target="_blank">LinkedIn</a>
+                {{ end }}
+                {{ if isset .Params "github" }}
+                    <a href="https://www.github.com/{{ .Params.github }}" target="_blank">Github</a>
+                {{ end }}
+                {{ if isset .Params "twitter" }}
+                    <a href="https://wwww.twitter.com/{{ .Params.twitter }}" target="_blank">Twitter</a>
+                {{ end }}
+            </div>
+            <div>
                 {{ .Content }}
             </div>
         </div>

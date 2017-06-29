@@ -1,7 +1,6 @@
 +++
 date = "2017-06-28T17:12:42-04:00"
 github = "lmdragun"
-linkedin = ""
 name = "Lindsey Dragun"
 wwcdctitle = "Technology Team Lead/Mentorship Team Lead"
 twitter = "lmdragun"
