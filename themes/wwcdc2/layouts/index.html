@@ -4,10 +4,41 @@
   {{ partial "head.html" .}}
 </head>
 <body>
-  <div>
-    {{ range where .Data.Pages "Type" "people" }}
-      {{ partial "people" . }}
-    {{ end }}
+  <div class="container">
+    <div class="row logo">
+      <div class="column">
+        <img src="{{ .Site.BaseURL }}/images/logo.png"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h1>Women Who Code DC</h1>
+        <p>
+          Blurb about Women Who Code DC :D
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h1>Leadership</h1>
+      </div>
+    </div>
+    <div class="people">
+      {{ range where .Data.Pages "Type" "people" }}
+        {{ partial "people" . }}
+      {{ end }}
+    </div>
   </div>
 </body>
+<script>
+  $(".person").click(function(ev){
+    ev.preventDefault();
+    if($(this).hasClass("open")) {
+      $(this).removeClass("open")
+    } else {
+      $(".person").removeClass("open")
+      $(this).addClass("open")
+    }
+  })
+</script>
 </html>

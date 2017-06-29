@@ -7,3 +7,4 @@ quote = "Really? I think quotes are corny but I like this one: 'Well behaved wom
 wwcdctitle = "Technology/Project Lead"
 twitter = "@iconteh21"
 image = "/images/isa.png"
++++
