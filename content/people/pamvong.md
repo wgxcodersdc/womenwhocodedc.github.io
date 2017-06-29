@@ -6,6 +6,6 @@ name = "Pamela Vong"
 quote = "hello world"
 wwcdctitle = "Director"
 twitter = ""
-image = "https://www.filepicker.io/api/file/ML4OBK4kTqGcOIp8ohHl/convert?fit=scales&h=300"
+image = "/images/default.png"
 +++
 
