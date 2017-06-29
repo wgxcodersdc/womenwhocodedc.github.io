@@ -6,6 +6,6 @@ name = "Emma Grasmeder"
 quote = "Join our team!"
 wwcdctitle = "Alumni"
 twitter = ""
-image = "https://www.filepicker.io/api/file/rBDYIj53TrS6qAEGrsRD/convert?fit=scales&h=300"
+image = "/images/default.png"
 +++
 

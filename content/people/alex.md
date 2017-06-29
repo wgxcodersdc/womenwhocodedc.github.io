@@ -6,6 +6,6 @@ name = "Alex Ulsh"
 quote = "Women Who Code DC changed my life! Come join us!"
 wwcdctitle = "Director"
 twitter = "alexulsh"
-image = "https://www.filepicker.io/api/file/5i7DooxnSC3aFIOoB1x5/convert?fit=scales&h=300"
+image = "/images/alex.jpg"
 +++
 

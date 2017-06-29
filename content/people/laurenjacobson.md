@@ -6,6 +6,6 @@ Name = "Lauren Jacobson"
 quote = "Join our team!"
 wwcdctitle = "Director"
 twitter = ""
-image = ""
+image = "/images/default.png"
 +++
 

@@ -6,6 +6,6 @@ name = "Kaylyn Gibilterra"
 wwcdctitle = "Alumni"
 quote = "Women Who Code has introduced me to other rockstar engineers that continually inspire me to excel in tech"
 twitter = ""
-image = "https://www.filepicker.io/api/file/CVPcaZTTEumczPtq96I8/convert?fit=scales&h=300"
+image = "/images/kaylin.jpg"
 +++
 

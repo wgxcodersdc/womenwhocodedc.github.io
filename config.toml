@@ -1,5 +1,5 @@
 baseurl = "http://staging.womenwhocodedc.com"
 languageCode = "en-us"
 title = "The Washington DC Chapter of WWC"
-theme = "wwcdc"
+theme = "wwcdc2"
 menu = "main"

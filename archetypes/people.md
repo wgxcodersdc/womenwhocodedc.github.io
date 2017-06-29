@@ -6,5 +6,5 @@ quote = ""
 github = ""
 twitter = ""
 linkedin = ""
-image = ""
+image = "/images/default.png"
 +++

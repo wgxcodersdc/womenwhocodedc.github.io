@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" .}}
+</head>
+<body>
+  <div>
+    {{ range where .Data.Pages "Type" "people" }}
+      {{ partial "people" . }}
+    {{ end }}
+  </div>
+</body>
+</html>
