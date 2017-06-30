@@ -31,14 +31,15 @@
   </div>
 </body>
 <script>
-  $(".person").click(function(ev){
+  $(".person a.toggle").click(function(ev){
     ev.preventDefault();
-    if($(this).hasClass("open")) {
-      $(this).removeClass("open")
+    var $parent = $(this).parent();
+    if($parent.hasClass("open")) {
+      $parent.removeClass("open")
     } else {
       $(".person").removeClass("open")
-      $(this).addClass("open")
+      $parent.addClass("open")
     }
-  })
+  });
 </script>
 </html>
