@@ -16,6 +16,9 @@
         <p>
           Blurb about Women Who Code DC :D
         </p>
+        <p>
+          <a class="button" href="https://www.meetup.com/Women-Who-Code-DC/">Join our Meetup Group</a>
+        </p>
       </div>
     </div>
     <div class="row">
@@ -27,6 +30,11 @@
       {{ range where .Data.Pages "Type" "people" }}
         {{ partial "people" . }}
       {{ end }}
+    </div>
+    <div class="row">
+      <div class="column">
+        <p style="text-align:center"><a href="https://www.womenwhocode.com/">Women Who Code</a></p>
+      </div>
     </div>
   </div>
 </body>
