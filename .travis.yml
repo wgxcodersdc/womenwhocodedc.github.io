@@ -7,7 +7,7 @@ before_install:
   - docker pull felicianotech/docker-hugo:0.22.1
 
 script:
-- ./deploy.sh
+- docker run felicianotech/docker-hugo ./deploy.sh
 
 env:
   global:
