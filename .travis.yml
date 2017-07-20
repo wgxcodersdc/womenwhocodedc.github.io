@@ -1,17 +1,6 @@
-sudo: true
-
-language: cpp
-
-services:
-  - docker
-
 before_install:
-  - docker pull ubuntu:latest
-  - docker run -it ubuntu bash
-
-install:
-  - apt-get update
-  - apt-get install hugo
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.25.1/hugo_0.25.1_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.25.1_Linux-64bit.deb
 
 script:
   - ./deploy.sh
