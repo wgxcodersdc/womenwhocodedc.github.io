@@ -48,7 +48,7 @@ then
 
   # Push source and build repos.
   git subtree split --prefix=public -b master
-  git push -f "https://$GH_TOKEN@$GH_REF" master:master
+  git push -f "https://$GITHUB_USER:$GITHUB_API_KEY@$GH_REF" master:master
   git branch -D master
 
 fi
