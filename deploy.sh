@@ -32,7 +32,7 @@ then
   git config user.email "wwcodedc@gmail.com"
 
   # add CNAME please?
-  echo "www.womenwhocodedc.com" > public/CNAME
+  echo "staging.womenwhocodedc.com" > public/CNAME
 
   # Add changes to git.
   git add -A
@@ -53,12 +53,12 @@ then
 
 fi
 
-# If not on master then don't push to gh-pages
+# If not on dev then don't push to gh-pages
 
 if [[ $TRAVIS_BRANCH != "dev" ]]
 then 
 
-  echo "Not on master branch, not updating WWCDC public website"
+  echo "Not on dev branch, not updating WWCDC public website"
   echo "On $TRAVIS_BRANCH branch, not pushing to master"
 
 fi
