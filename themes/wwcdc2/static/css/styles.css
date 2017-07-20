@@ -51,6 +51,7 @@
 .person.open .info-container {
     display: block;
     position: absolute;
+    z-index: 2;
 }
 
 @media(max-width: 785px) {
