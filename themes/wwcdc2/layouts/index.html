@@ -8,14 +8,13 @@
     <div class="overlay"></div>
     <div class="row logo">
       <div class="column">
-        <img src="{{ .Site.BaseURL }}/images/logo.png"/>
+        <img src="{{ .Site.BaseURL }}/images/logo.png" alt="Women Who Code DC"/>
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <h1>Women Who Code DC</h1>
         <p>
-          Blurb about Women Who Code DC :D
+          We are the leaders of Women Who Code DC.
         </p>
         <p>
           <a class="button" href="https://www.meetup.com/Women-Who-Code-DC/">Join our Meetup Group</a>
@@ -28,7 +27,8 @@
       </div>
     </div>
     <div class="people">
-      {{ range where .Data.Pages "Type" "people" }}
+      {{ $peoplePages := where .Pages "Type" "people" }}
+      {{ range sort $peoplePages ".Params.name" }}
         {{ partial "people" . }}
       {{ end }}
     </div>
