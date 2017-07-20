@@ -1,0 +1,44 @@
+.logo {
+}
+.logo img {
+     width: 200px;
+}
+.people {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.person {
+    width: 150px;
+    margin: 20px;
+}
+.person img { 
+    padding:3px;
+}
+
+.person.open img {
+    border: 3px solid #8d2020;
+    padding:0;
+}
+
+.person .info-container {
+    display: none;
+}
+
+.person.open .info-container {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.info-container .info-copy {
+    max-width: 600px;
+}
+
+.person img {
+    width: 150px;
+    height: 150px;
+}

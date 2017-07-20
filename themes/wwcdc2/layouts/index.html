@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" .}}
+</head>
+<body>
+  <div class="container">
+    <div class="row logo">
+      <div class="column">
+        <img src="{{ .Site.BaseURL }}/images/logo.png"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h1>Women Who Code DC</h1>
+        <p>
+          Blurb about Women Who Code DC :D
+        </p>
+        <p>
+          <a class="button" href="https://www.meetup.com/Women-Who-Code-DC/">Join our Meetup Group</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h1>Leadership</h1>
+      </div>
+    </div>
+    <div class="people">
+      {{ range where .Data.Pages "Type" "people" }}
+        {{ partial "people" . }}
+      {{ end }}
+    </div>
+    <div class="row">
+      <div class="column">
+        <p style="text-align:center"><a href="https://www.womenwhocode.com/">Women Who Code</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(".person a.toggle").click(function(ev){
+    ev.preventDefault();
+    var $parent = $(this).parent();
+    if($parent.hasClass("open")) {
+      $parent.removeClass("open")
+    } else {
+      $(".person").removeClass("open")
+      $parent.addClass("open")
+    }
+  });
+</script>
+</html>
