@@ -5,6 +5,7 @@
 </head>
 <body>
   <div class="container">
+    <div class="overlay"></div>
     <div class="row logo">
       <div class="column">
         <img src="{{ .Site.BaseURL }}/images/logo.png"/>
@@ -41,13 +42,23 @@
 <script>
   $(".person a.toggle").click(function(ev){
     ev.preventDefault();
-    var $parent = $(this).parent();
+    var $parent = $(this).closest(".person");
+    var $overlay = $('.overlay');
     if($parent.hasClass("open")) {
       $parent.removeClass("open")
+      $overlay.removeClass("open");
     } else {
       $(".person").removeClass("open")
       $parent.addClass("open")
+      if ($parent.length > 0) {
+        $overlay.addClass("open");
+      }
     }
+  });
+  $(".overlay").click(function(ev){
+    ev.preventDefault();
+    $(".person").removeClass("open")
+    $(this).removeClass("open");
   });
 </script>
 </html>

@@ -9,11 +9,16 @@
     flex-wrap: wrap;
 }
 .person {
-    width: 150px;
+    width: 200px;
     margin: 20px;
 }
 .person img { 
     padding:3px;
+}
+
+.person img {
+    width: 200px;
+    height: 200px;
 }
 
 .person.open img {
@@ -21,24 +26,57 @@
     padding:0;
 }
 
+.person .intro h4 {
+    margin-bottom: 0;
+}
+
+.person .intro small {
+    margin-right: 7px;
+    line-height: 1;
+}
+
+.person .intro .social {
+    display: inline-block;
+    font-size: 1.9rem;
+}
+
 .person .info-container {
     display: none;
+}
+
+.person.open {
+    z-index: 2;
 }
 
 .person.open .info-container {
     display: block;
     position: absolute;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background-color: rgba(255,255,255,0.9);
+}
+
+@media(max-width: 785px) {
+    .person.open .info-container {
+        margin-left: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
 }
 
 .info-container .info-copy {
-    max-width: 600px;
+    max-width: 500px;
 }
 
-.person img {
-    width: 150px;
-    height: 150px;
+.overlay {
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+    position: absolute;    
+    background-color: rgba(255,255,255,0.9);
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
